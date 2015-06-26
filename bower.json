@@ -1,0 +1,12 @@
+{
+  "name": "angular-redtube-api",
+  "version": "0.0.0",
+  "authors": [
+    "Bruno Paixão <brunomrpx@gmail.com>"
+  ],
+  "description": "Application to consume redtube API",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.1"
+  }
+}
