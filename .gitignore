@@ -1,2 +1,5 @@
 # vendors folder
 bower_components
+
+# vim SWAP files
+*.swp
