@@ -1,13 +1,26 @@
 <h1>RedTube API</h1>
 <div class="row">
     <div class="col-md-12">
-        <ui-select ng-model="home.tag.selected" theme="bootstrap" multiple tagging>
-            <ui-select-match placeholder="Select some tags">
-                {{ $item.tag.tag_name }}
-            </ui-select-match>
-            <ui-select-choices repeat="tag in home.tags | filter: $select.search">
-                <div ng-bind-html="tag.tag.tag_name | highlight: $select.search"></div>
-            </ui-select-choices>
-        </ui-select>
+        <form ng-submit="home.search(home.searchText, home.tag.selected)">
+            <div class="form-group">
+                <ui-select ng-model="home.tag.selected" theme="bootstrap" multiple tagging>
+                    <ui-select-match placeholder="Select some tags">
+                        {{ $item.tag.tag_name }}
+                    </ui-select-match>
+                    <ui-select-choices repeat="tag in home.tags | filter: $select.search">
+                        <div ng-bind-html="tag.tag.tag_name | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search..." ng-model="home.searchText">
+            </div>
+            <button class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="videos">
+        <render-videos videos="home.videos"></render-videos>
     </div>
 </div>

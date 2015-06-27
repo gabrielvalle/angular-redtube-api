@@ -1,0 +1,9 @@
+<div ng-repeat="video in videos" class="video-container">
+    <a href="{{ video.video.url }}" target="_blank">
+        <img src="{{ video.video.thumb }}">
+            <div class="details">
+            <p><strong>{{ video.video.title }}</strong></p>
+            <p><strong>{{ video.video.duration }}</strong></p>
+        </div>
+    </a>
+</div>

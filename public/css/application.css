@@ -1,0 +1,27 @@
+.videos {
+    margin-top: 10px;
+}
+
+.video-container {
+    width: 180px;
+    display: inline-block;
+    position: relative;
+}
+
+.video-container .details {
+    position: absolute;
+    bottom: 0;
+    display: none;
+    background-color: #ccc;
+    opacity: 0.8;
+    width: 100%;
+    padding: 5px;
+}
+
+.video-container .details p {
+    margin: 0px;
+}
+
+.video-container:hover .details {
+    display: block;
+}
