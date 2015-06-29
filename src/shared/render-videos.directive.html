@@ -1,11 +1,14 @@
+<script type="text/ng-template" id="popoverContent.html">
+    <p><strong>Rating</strong>: {{ video.rating }}</p>
+    <p><strong>Ratings</strong>: {{ video.ratings }}</p>
+    <p><strong>Views</strong>: {{ video.views}}</p>
+    <p><strong>Duration</strong>: {{ video.duration }}</p>
+</script>
+
 <div class="row">
-<div ng-repeat="video in videos" class="col-lg-2">
-    <a href="{{ video.video.url }}" target="_blank" class="thumbnail">
-        <img src="{{ video.video.thumb }}">
-        <div class="details">
-            <p><strong>{{ video.video.duration }}</strong>
-            <!--<p><strong>{{ video.video.title }}</strong>-->
-        </div>
-    </a>
-</div>
+    <div ng-repeat="video in videos" class="col-lg-2 video-container video-{{ video.video.video_id }}">
+        <a href="{{ video.video.url }}" target="_blank" class="thumbnail">
+            <img src="{{ video.video.thumb }}">
+        </a>
+    </div>
 </div>
