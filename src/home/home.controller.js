@@ -12,6 +12,7 @@
         vm.tags = [];
         vm.search = search;
 
+        loadTags();
         search();
 
         function search(searchText, tags) {
@@ -33,9 +34,10 @@
             });
         }
 
-        var response = Tags.query(function() {
-            vm.tags = response.tags;
-        });
+        function loadTags() {
+            var response = Tags.query(function() {
+                vm.tags = response.tags;
+            });
+        }
     }
-
 })();
