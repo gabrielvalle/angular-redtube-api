@@ -8,8 +8,11 @@
 
     function VideosService($resource) {
         return $resource(
-            'http://cors-server.getup.io/url/api.redtube.com/?data=redtube.Videos.searchVideos&output=json&thumbsize=medium',
-            {},
+            'http://cors-server.getup.io/url/api.redtube.com/?data=redtube.Videos.searchVideos',
+            {
+                output: 'json',
+                ordering: 'mostviewed'
+            },
             {
                 query: {
                     method: "GET",

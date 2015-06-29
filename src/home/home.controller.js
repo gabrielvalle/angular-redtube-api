@@ -12,17 +12,21 @@
         vm.tags = [];
         vm.search = search;
 
+        search();
+
         function search(searchText, tags) {
-            tags = tags.map(function(tag) {
-                return tag.tag.tag_name;
-            });
+            var params = {};
 
-            var params = {
-                search: searchText,
-                "tags[]": tags.join(',')
-            };
+            if (tags) {
+                tags = tags.map(function(tag) {
+                    return tag.tag.tag_name;
+                });
+                params['tags[]'] = tags.join(',');
+            }
 
-            console.log(params);
+            if (searchText) {
+                params.search = searchText;
+            }
 
             var response = Videos.get(params, function() {
                 vm.videos = response.videos;
