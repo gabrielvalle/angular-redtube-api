@@ -15,5 +15,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/brunomrpx/angular-redtube-api/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.0"
   }
 }
