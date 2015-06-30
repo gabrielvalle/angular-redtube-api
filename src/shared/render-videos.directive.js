@@ -10,7 +10,7 @@
     function RenderVideos($timeout, $templateCache, $interpolate) {
         var directiveDefinition = {
             restrict: 'E',
-            templateUrl: 'src/shared/render-videos.directive.html',
+            templateUrl: 'shared/render-videos.directive.html',
             scope: {
                 videos: '='
             },
