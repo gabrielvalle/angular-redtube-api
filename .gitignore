@@ -4,3 +4,6 @@ node_modules
 
 # vim SWAP files
 *.swp
+
+# build folder
+dist
