@@ -1,0 +1,19 @@
+{
+  "name": "angular-redtube-api",
+  "version": "0.0.0",
+  "description": "Application to consume Redtube API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brunomrpx/angular-redtube-api.git"
+  },
+  "author": "Bruno Paixão <brunomrpx@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunomrpx/angular-redtube-api/issues"
+  }
+}
